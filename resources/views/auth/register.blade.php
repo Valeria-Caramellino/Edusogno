@@ -85,6 +85,8 @@
                             </div>
                         </div>
                     </form>
+
+                    <p>Sei un utente già registrato? <a href="{{ route('login') }}">login</a></p>
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@
 
 
 
-                    Sei l'amministratore
+                    Sei User
                 </div>
             </div>
         </div>
