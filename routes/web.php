@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\User\EventController as UserEventController;
+use App\Http\Controllers\User\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,8 @@ Route::middleware(['auth'])
  	
  		Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
+        Route::resource( 'events', EventController::class );
+
 });
 
 Route::middleware(['auth', 'role:user']) // Middleware per utenti con ruolo 'user'
@@ -35,7 +39,11 @@ Route::middleware(['auth', 'role:user']) // Middleware per utenti con ruolo 'use
     ->group(function () {
         // Rotte dell'area utente
         Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
-    });
+
+        Route::resource( 'events', UserEventController::class );
+        
+        Route::post('events/join', [UserEventController::class, 'joinEvent'])->name('events.join');
+});
 
 
 
