@@ -19,6 +19,9 @@
 
 
                     Sei l'amministratore
+                    <h5>{{$user->name}} {{$user->surname}}</h5>
+
+
                 </div>
             </div>
         </div>
