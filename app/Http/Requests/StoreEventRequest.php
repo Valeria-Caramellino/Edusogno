@@ -24,7 +24,9 @@ class StoreEventRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "title" => "required|min:1|max:50",
+            "start_event" => "required",
         ];
     }
 }
+
