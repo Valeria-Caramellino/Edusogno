@@ -51,14 +51,14 @@
 
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.events.index' ? 'bg-primary' : '' }}" href="{{route('admin.events.index')}}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i>Lista Eventi
+                                    <i class="fa-solid fa-list" style="color: #fcfcfc;"></i> Lista Eventi
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.events.create' ? 'bg-primary' : '' }}" href="{{route('admin.events.create')}}">
                                     
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Crea Evento
+                                    <i class="fa-solid fa-plus"></i> Crea Evento
 
                                 </a>
                             </li>
