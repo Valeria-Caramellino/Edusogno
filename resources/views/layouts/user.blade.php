@@ -51,7 +51,7 @@
 
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'user.events.index' ? 'bg-primary' : '' }}" href="{{route('user.events.index')}}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Eventi
+                                    <i class="fa-solid fa-list" style="color: #fcfcfc;"></i> Lista Eventi
                                 </a>
                             </li>
 
