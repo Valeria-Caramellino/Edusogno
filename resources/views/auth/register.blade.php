@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="mb-4 row">
-                            <input type="hidden" name="role" value="user">
+                            
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">

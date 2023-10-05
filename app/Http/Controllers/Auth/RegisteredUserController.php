@@ -33,7 +33,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],
-            'role' => ['required', 'string', 'max:255'],
+            // 'role' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
@@ -41,7 +41,7 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'surname' => $request->surname,
-            'role' => $request->role,
+            'role' => 'user',
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -51,14 +51,12 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         if ($user->role === 'user') {
-            return redirect()->route('user.dashboard'); // Sostituisci con il nome della rotta per il pannello utente
+            return redirect()->route('user.dashboard'); 
         } elseif ($user->role === 'admin') {
-            return redirect()->route('admin.dashboard'); // Sostituisci con il nome della rotta per il pannello amministratore
+            return redirect()->route('admin.dashboard'); 
         } else {
             //Ruolo non riconosciuto, gestisci come preferisci
             return redirect()->intended(RouteServiceProvider::HOME);
         }
-
-        // return redirect(RouteServiceProvider::HOME);
     }
 }
