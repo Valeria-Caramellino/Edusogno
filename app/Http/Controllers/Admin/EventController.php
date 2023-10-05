@@ -67,7 +67,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        return view('admin.events.show', compact('event'));
+        $registeredUsers = $event->users;
+        return view('admin.events.show', compact('event', 'registeredUsers'));
 
         
     }
