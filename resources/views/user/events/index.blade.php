@@ -4,7 +4,11 @@
 <div class="container-fluid mt-4">
     <h5>Elenco di tutti gli Eventi</h5>
     <div class="row justify-content-around">
-        
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         
         @foreach ($events as $item)
         <div class="card col-auto">
