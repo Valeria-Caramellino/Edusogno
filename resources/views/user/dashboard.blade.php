@@ -5,9 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8 mx-auto text-center my-2">
             <h3>Benvenuto {{$user->name}} {{$user->surname}}</h3>
-            <h5>Elenco Eventi </h5>
+            <h5>Elenco Eventi a cui sei iscritto </h5>
         </div>
     </div>
+
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
     <div class="row justify-content-around">
         
     @if ( count($userEvents)  > 0)
