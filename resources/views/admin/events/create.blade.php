@@ -2,31 +2,36 @@
 
 @section('content')
 
+{{-- sezione di creazione --}}
 <div class="container-fluid mt-4">
 
+    {{-- row del titolo --}}
     <div class="row">
 
-        <div class="col-md-8">
-            <h4>Benvenuto nella pagina di creazione. <br> Popola il form e metti in vetrina il tuo nuovo Evento 😀</h4>
+        <div class="col-md-8 mx-auto text-center">
+            <h4>Benvenuto nella pagina di creazione. <br> Popola il form e metti in evidenza il tuo nuovo Evento 😀</h4>
         </div>
 
     </div>
+
+    {{--row errore form --}}
     <div class="row">
-        {{-- error form --}}
+        
         <div class="col-md-8 mx-auto my-2">
             @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul class="mb-0">
-                    @foreach ($errors->all() as $err)
-                        <li>{{ $err }}</li>
-                    @endforeach
-                </ul>
-            </div>
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $err)
+                            <li>{{ $err }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             @endif
         </div>
 
     </div>
 
+    {{-- row contenente il form --}}
     <div class="row">
 
         <form action="{{ route("admin.events.store") }}" method="POST" class="needs-validation col-11 col-lg-6 mx-auto" enctype="multipart/form-data">

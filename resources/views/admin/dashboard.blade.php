@@ -1,30 +1,18 @@
 @extends('layouts.admin')
 
 @section('content')
+{{-- sezione entrata admin --}}
 <div class="container-fluid mt-4">
-    <div class="row justify-content-center">
+
+    <div class="row justify-content-center align-items-center">
+       
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
+            <h4>Buongiorno Admin: {{$user->name}} {{$user->surname}} cosa facciamo oggi?</h4>
+            <h4 class="text-center">👈😉</h4>
 
-                    {{ __('You are logged in!') }}
-
-
-
-                    Sei l'amministratore
-                    <h5>{{$user->name}} {{$user->surname}}</h5>
-
-
-                </div>
-            </div>
         </div>
+    
     </div>
 </div>
 @endsection

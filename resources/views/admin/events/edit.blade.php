@@ -2,17 +2,21 @@
 
 @section('content')
 
+{{-- sezione di modifica evento --}}
 <div class="container-fluid mt-4">
 
+    {{-- row di titolo --}}
     <div class="row">
 
-        <div class="col-md-8">
-            <h4>Benvenuto nella pagina di Modifica😀.</h4>
+        <div class="col-md-8 mx-auto text-center">
+            <h4>Benvenuto nella pagina di Modifica.😀</h4>
         </div>
 
     </div>
+
+    {{--row errore form --}}
     <div class="row">
-        {{-- error form --}}
+        
         <div class="col-md-8 mx-auto my-2">
             @if ($errors->any())
             <div class="alert alert-danger">
@@ -27,6 +31,7 @@
 
     </div>
 
+    {{-- row contenente il form --}}
     <div class="row">
 
         <form action="{{ route("admin.events.update", $event) }}" method="post" class="needs-validation col-11 col-lg-6 mx-auto" enctype="multipart/form-data">
@@ -59,7 +64,6 @@
 
             </div>
 
-        
         </form>
 
     </div>

@@ -1,33 +1,43 @@
 @extends('layouts.admin')
 
 @section('content')
+
+{{-- sezione elenco eventi --}}
 <div class="container-fluid mt-4">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        
+        {{-- titolo sezione --}}
+        <div class="col-auto">
+            <h4>Elenco completo eventi</h4>
+        </div>
 
-            <div>
-                <h4>Elenco completo eventi</h4>
-            </div>
+    </div>
+</div>
 
-            @foreach ($events as $item)
-            <div class="card">
-                <div class="card-header">  <p>{{$item->title}}</p> </div>
+<div class="container-fluid overflow-y-scroll mt-2">
+    
+    {{--row contenente eventi--}}
+    <div class="row justify-content-around flex-wrap">
 
-                <div class="card-body">
-                    
+        @foreach ($events as $item)
+            <div class="card col-md-3 mx-2 my-1 ">
+                
+
+                <div class="card-body text-center">
+                    <h5>{{$item->title}}</h5>
                       
                     <p>{{$item->start_event}}</p>
 
-                    <button class="btn btn-primary ">
-                        <a class="text-light" href="{{ route('admin.events.show', $item) }}">
+                    {{-- passa alla show --}}
+                    <a class="text-light text-decoration-none btn btn-primary w-100" href="{{ route('admin.events.show', $item) }}">
                         More info
-                        </a>
-                    </button>
+                    </a>
+                    
 
                 </div>
             </div>
-            @endforeach
-        </div>
+        @endforeach
+        
     </div>
 </div>
 @endsection
