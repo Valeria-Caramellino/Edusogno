@@ -1,1 +1,62 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+*{
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+//VARIABILI COLORI BG E TESTO
+
+$blue:rgba(19, 64, 119, 1);
+$height_container_my:  calc(100vh - 280px);
+$height_navbar_left_my : calc(100vh - 80px);
+$height_main_my: calc(100vh - 80px);
+$text-mute: rgba(33, 37, 41, 0.55);
+
+main{
+    height: $height_main_my;
+    background-image: url('../../public/storage/bg_Edusogno.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    h4{
+        color: $blue;
+        font-weight: 600;
+    }
+    h5{
+        color: $blue;
+       
+    }
+}
+div.row.h-100{
+    height: $height_navbar_left_my !important;
+    background-color: $blue ;
+}
+div.container-fluid div.row.justify-content-center.align-items-center{
+    height: $height_container_my;
+   
+}
+div.container-fluid.overflow-y-scroll{
+    height: $height_container_my !important;
+    
+    
+    p{
+        color: $text-mute ;
+    }
+}
+div.row.justify-content-center{
+    div.card-body.text-center{
+    
+        p{
+            color: $text-mute;
+        }
+        ul{
+            width: 70%;
+            margin: auto;
+            
+            li{
+                text-align: center;
+                list-style-type: none;
+            }
+        }
+    }
+}
