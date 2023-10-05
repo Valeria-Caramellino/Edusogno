@@ -30,7 +30,7 @@
 
                     {{-- passa alla show --}}
                     <a class="text-light text-decoration-none btn btn-primary w-100" href="{{ route('admin.events.show', $item) }}">
-                        More info
+                        Altre info
                     </a>
                     
 
