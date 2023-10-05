@@ -25,6 +25,7 @@
 
         <div class="container-fluid vh-100">
 
+            {{-- navbar top header --}}
             <nav class="navbar navbar-light bg-white shadow-sm">
                 <div class="container">
                     <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
@@ -36,6 +37,7 @@
                 </div>
             </nav>
 
+            {{-- nav di navigazione dei contenuti --}}
             <div class="row h-100">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block  navbar-dark sidebar collapse">
                     <div class="position-sticky pt-3">
@@ -67,6 +69,7 @@
                     </div>
                 </nav>
 
+                {{-- contenuto del main --}}
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                     @yield('content')
                 </main>
