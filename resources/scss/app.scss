@@ -17,8 +17,8 @@ $text-mute: rgba(33, 37, 41, 0.55);
 }
 .shadow-sm{
     box-shadow: 0 0.125rem 0.25rem 0 rgba(13, 110, 253, 0.75) !important;
-    // border-bottom-right-radius: 10px;
-    // border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 main{
@@ -35,50 +35,56 @@ main{
         color: $blue;
        
     }
+
+    
+    div.container-fluid div.row.justify-content-center.align-items-center{
+        height: $height_container_my;
+        
+    }
+    
+    div.container-fluid.overflow-y-scroll{
+        height: $height_container_my !important;
+        
+        
+        p{
+            color: $text-mute ;
+        }
+    }
+    
+    div.row.justify-content-center{
+        div.card-body.text-center{
+            
+            p{
+                color: $text-mute;
+            }
+            ul{
+                width: 70%;
+                margin: auto;
+                
+                li{
+                    text-align: center;
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+    
+    .card{
+        border: 1px solid black !important;
+    }
+    
+    ////sezione style form
+    
+    .form-control{
+        border: none !important;
+        border-bottom: 1px solid black !important;
+        border-radius: 0 !important;
+    }
+    .form-control:focus{
+        box-shadow: 0 0.15rem 0 0 rgba(13, 110, 253, 0.25);
+    }
 }
 div.row.h-100{
     height: $height_navbar_left_my !important;
     background-color: $blue ;
-}
-div.container-fluid div.row.justify-content-center.align-items-center{
-    height: $height_container_my;
-   
-}
-div.container-fluid.overflow-y-scroll{
-    height: $height_container_my !important;
-    
-    
-    p{
-        color: $text-mute ;
-    }
-}
-div.row.justify-content-center{
-    div.card-body.text-center{
-    
-        p{
-            color: $text-mute;
-        }
-        ul{
-            width: 70%;
-            margin: auto;
-            
-            li{
-                text-align: center;
-                list-style-type: none;
-            }
-        }
-    }
-}
-.card{
-    border: 1px solid black !important;
-}
-////sezione style form
-
-.form-control{
-    border: none !important;
-    border-bottom: 1px solid black !important;
-    border-radius: 0 !important;
-}
-.form-control:focus{
-    box-shadow: 0 0.15rem 0 0 rgba(13, 110, 253, 0.25);
 }
