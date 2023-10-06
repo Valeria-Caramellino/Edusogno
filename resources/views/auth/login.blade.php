@@ -63,7 +63,7 @@
 
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Scrivila qui">
 
-                                    <i id="showPw" onclick="togglePasswordVisibility()" class="fa-solid fa-eye-slash position-absolute bottom-50 end-0"></i>
+                                    <i id="showPw" onclick="togglePasswordVisibility()" class="fa-solid fa-eye-slash position-absolute bottom-50 end-0" style="color: #0a60f5;"></i>
                                 </div>
 
                                 @error('password')
