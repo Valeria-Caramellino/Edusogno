@@ -1,6 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
+
+<script>
+
+    function togglePasswordVisibility() {
+        const passwordField = document.getElementById('password');
+        const showPwIcon = document.getElementById('showPw');
+    
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            showPwIcon.classList.remove('fa-eye-slash');
+            showPwIcon.classList.add('fa-eye');
+        } else {
+            passwordField.type = 'password';
+            showPwIcon.classList.remove('fa-eye');
+            showPwIcon.classList.add('fa-eye-slash');
+        }
+    }
+    
+    </script>
+
+
 <div class="container">
     <div class="row py-4 justify-content-center">
         
@@ -38,7 +59,12 @@
                             <div class="col-md-6 mx-auto">
                                 <label for="password" class="col-md-6 col-form-label text-md-right"><b>Inserisci la password</b> </label>
 
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Scrivila qui">
+                                <div class="position-relative">
+
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Scrivila qui">
+
+                                    <i id="showPw" onclick="togglePasswordVisibility()" class="fa-solid fa-eye-slash position-absolute bottom-50 end-0"></i>
+                                </div>
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -61,7 +87,7 @@
                             
                             <div class="col-md-8 offset-md-4">
                                
-                                <p>Non hai ancora un profilo? <a href="{{ route('register') }}">Registrati</a></p>
+                                <p>Non hai ancora un profilo? <a class="text-dark" href="{{ route('register') }}">Registrati</a></p>
 
                             </div>
 
