@@ -9,8 +9,7 @@
         <div class="col-md-8">
 
             <h4>Buongiorno Admin: {{$user->name}} {{$user->surname}} cosa facciamo oggi?</h4>
-            <h4 class="text-center">👈😉</h4>
-
+        
         </div>
     
     </div>

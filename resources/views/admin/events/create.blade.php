@@ -9,7 +9,7 @@
     <div class="row">
 
         <div class="col-md-8 mx-auto text-center">
-            <h4>Benvenuto nella pagina di creazione. <br> Popola il form e metti in evidenza il tuo nuovo Evento 😀</h4>
+            <h4>Benvenuto nella pagina di creazione. <br> Popola il form e metti in evidenza il tuo nuovo Evento.</h4>
         </div>
 
     </div>

@@ -9,7 +9,7 @@
     <div class="row">
 
         <div class="col-md-8 mx-auto text-center">
-            <h4>Benvenuto nella pagina di Modifica.😀</h4>
+            <h4>Benvenuto nella pagina di Modifica.</h4>
         </div>
 
     </div>
