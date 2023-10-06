@@ -39,6 +39,8 @@ Route::middleware(['auth', 'role:user']) // Middleware per utenti con ruolo 'use
     ->group(function () {
         // Rotte dell'area utente
         Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
+        Route::get('/edit', [UserController::class, 'edit'])->name('edit');
+        Route::put('/update', [UserController::class, 'update'])->name('update');
 
         Route::resource( 'events', UserEventController::class );
         
