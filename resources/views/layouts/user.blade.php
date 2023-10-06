@@ -48,6 +48,9 @@
                             </a>
                         </li>
                         
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('user.edit')}}"> <i class="fa-solid fa-user-pen"></i> User</a>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -81,6 +84,12 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'user.events.index' ? 'bg-primary' : '' }}" href="{{route('user.events.index')}}">
                                     <i class="fa-solid fa-list" style="color: #fcfcfc;"></i> Lista Eventi
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'user.edit' ? 'bg-primary' : '' }}" href="{{route('user.edit')}}">
+                                    <i class="fa-solid fa-user-pen"></i> User
                                 </a>
                             </li>
 
