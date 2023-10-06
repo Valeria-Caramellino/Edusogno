@@ -27,12 +27,12 @@
 
         <nav class="navbar navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <div class="navbar-brand d-flex align-items-center">
                     <div class="logo_edusogno">
                         <img src="{{asset('storage/logo_Edusogno.png')}}" alt="img">
                     </div>
                     
-                </a>
+                </div>
  
             </div>
         </nav>
