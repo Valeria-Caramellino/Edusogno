@@ -5,20 +5,20 @@
 <div class="container-fluid mt-4">
 
     {{-- riga bottoni di navigazione --}}
-    <div class="row mb-3 justify-content-around">
+    <div class="row mb-3 justify-content-center flex-wrap">
         
-        <div class="col-2">
+        <div class="col-8 my-1 mx-1 col-md-3">
             
             <button class="btn btn-primary"><a class="text-light text-decoration-none" href="{{ route('admin.events.index')}}"> Torna alla Lista </a></button>
 
         </div>
-        <div class="col-2">
+        <div class="col-8 my-1 mx-1 col-md-3">
 
             <button class="btn btn-primary"><a class="text-light text-decoration-none" href="{{ route('admin.events.edit', $event)}}"> Modifica Evento </a></button>
 
         </div>
        
-        <div class="col-2">
+        <div class="col-8 my-1 mx-1 col-md-3">
 
             <form action="{{ route('admin.events.destroy', $event) }}" method="post">
             @csrf

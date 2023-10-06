@@ -22,20 +22,49 @@
 
 <body>
     <div id="app">
+        
+        {{-- navbar top header --}}
+        <nav class="navbar navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                    <div class="logo_edusogno">
+                        <img src="{{asset('storage/logo_Edusogno.png')}}" alt="img">
+                    </div>
+                    
+                </a>
 
-        <div class="container-fluid vh-100">
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            {{-- navbar top header --}}
-            <nav class="navbar navbar-light bg-white shadow-sm">
-                <div class="container">
-                    <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                        <div class="logo_edusogno">
-                            <img src="{{asset('storage/logo_Edusogno.png')}}" alt="img">
-                        </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('user.dashboard')}}"><i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('user.events.index')}}">
+                                <i class="fa-solid fa-list"></i> Lista Eventi
+                            </a>
+                        </li>
                         
-                    </a>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="fa-solid fa-sign-out-alt fa-lg fa-fw"></i> {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+
+            </div>
+        </nav>
+
+        <div class="container-fluid height_main_my">
+
 
             {{-- nav di navigazione dei contenuti --}}
             <div class="row h-100">

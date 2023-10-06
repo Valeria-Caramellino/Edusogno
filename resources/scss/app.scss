@@ -12,6 +12,9 @@ $height_navbar_left_my : calc(100vh - 80px);
 $height_main_my: calc(100vh - 80px);
 $text-mute: rgba(33, 37, 41, 0.55);
 
+.height_main_my{
+    height: $height_main_my;
+}
 .shadow-sm{
     box-shadow: 0 0.125rem 0.25rem 0 rgba(13, 110, 253, 0.75) !important;
     // border-bottom-right-radius: 10px;
