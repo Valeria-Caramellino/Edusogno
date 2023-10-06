@@ -16,6 +16,8 @@ class EventController extends Controller
         return view('user.events.index', compact( 'user','events' ));
     }
 
+
+    // popola la tabella pivot user partecipa a un evento crea nuova riga in pivot 
     public function joinEvent(Request $request)
     {
 
